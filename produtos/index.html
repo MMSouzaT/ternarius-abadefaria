@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos - Ternarius</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles/styles.css">
 </head>
 <body>
     <!-- Header -->
@@ -12,13 +12,18 @@
         <div class="container">
             <div class="logo">
                 <h1>Ternarius</h1>
-                <p class="tagline">Açaí e Picolés Artesanais</p>
+                <p class="tagline">Açaí e Cremes Artesanais</p>
             </div>
+            <button class="mobile-menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav class="nav">
                 <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="products.html" class="active">Produtos</a></li>
-                    <li><a href="contact.html">Contato</a></li>
+                    <li><a href="/">Início</a></li>
+                    <li><a href="/produtos" class="active">Produtos</a></li>
+                    <li><a href="/contato">Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -28,7 +33,7 @@
     <section class="page-header">
         <div class="container">
             <h1>Nossos Produtos</h1>
-            <p>Descubra toda a variedade de açaís e picolés artesanais</p>
+            <p>Descubra toda a variedade de açaís e cremes artesanais</p>
         </div>
     </section>
 
@@ -79,17 +84,17 @@
                 </div>
             </div>
 
-            <!-- Popsicle Products -->
+            <!-- Cremes Products -->
             <div class="product-category">
-                <h2>Picolés</h2>
+                <h2>Cremes</h2>
                 <div class="products-grid">
                     <div class="product-item">
                         <div class="product-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
                             <span class="product-emoji">🍓</span>
                         </div>
                         <div class="product-info">
-                            <h3>Picolé de Morango</h3>
-                            <p>Feito com morangos frescos e selecionados. Sabor intenso e natural.</p>
+                            <h3>Creme de Morango</h3>
+                            <p>Creme suave com morangos frescos. Textura aveludada e sabor intenso.</p>
                             <span class="product-badge">Favorito</span>
                         </div>
                     </div>
@@ -98,8 +103,8 @@
                             <span class="product-emoji">🥥</span>
                         </div>
                         <div class="product-info">
-                            <h3>Picolé de Coco</h3>
-                            <p>Sabor tropical refrescante com pedaços de coco. Cremoso e delicioso.</p>
+                            <h3>Creme de Coco</h3>
+                            <p>Creme tropical com coco ralado. Cremosidade irresistível.</p>
                         </div>
                     </div>
                     <div class="product-item">
@@ -107,17 +112,8 @@
                             <span class="product-emoji">🍋</span>
                         </div>
                         <div class="product-info">
-                            <h3>Picolé de Limão</h3>
-                            <p>Acidez refrescante na medida certa. Perfeito para dias quentes.</p>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <div class="product-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
-                            <span class="product-emoji">🍉</span>
-                        </div>
-                        <div class="product-info">
-                            <h3>Picolé de Melancia</h3>
-                            <p>Frescor natural e saboroso. Zero açúcar adicionado.</p>
+                            <h3>Creme de Limão</h3>
+                            <p>Creme refrescante com toque cítrico. Perfeito para sobremesas.</p>
                         </div>
                     </div>
                     <div class="product-item">
@@ -125,8 +121,8 @@
                             <span class="product-emoji">🍑</span>
                         </div>
                         <div class="product-info">
-                            <h3>Picolé de Pêssego</h3>
-                            <p>Sabor suave e adocicado. Perfeito para todas as idades.</p>
+                            <h3>Creme de Pêssego</h3>
+                            <p>Sabor suave e delicado. Textura cremosa e saborosa.</p>
                         </div>
                     </div>
                     <div class="product-item">
@@ -134,8 +130,8 @@
                             <span class="product-emoji">🍒</span>
                         </div>
                         <div class="product-info">
-                            <h3>Picolé de Cereja</h3>
-                            <p>Sabor marcante de cerejas frescas. Experiência única.</p>
+                            <h3>Creme de Cereja</h3>
+                            <p>Creme com cerejas frescas. Sabor marcante e elegante.</p>
                         </div>
                     </div>
                     <div class="product-item">
@@ -143,8 +139,8 @@
                             <span class="product-emoji">🥭</span>
                         </div>
                         <div class="product-info">
-                            <h3>Picolé de Manga</h3>
-                            <p>Manga madura e suculenta. Sabor tropical irresistível.</p>
+                            <h3>Creme de Manga</h3>
+                            <p>Manga madura em creme aveludado. Sabor tropical único.</p>
                         </div>
                     </div>
                     <div class="product-item">
@@ -152,8 +148,17 @@
                             <span class="product-emoji">🍇</span>
                         </div>
                         <div class="product-info">
-                            <h3>Picolé de Uva</h3>
-                            <p>Uvas selecionadas para um sabor intenso e refrescante.</p>
+                            <h3>Creme de Uva</h3>
+                            <p>Creme com uvas selecionadas. Sabor intenso e refrescante.</p>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                            <span class="product-emoji">🍫</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Creme de Chocolate</h3>
+                            <p>Creme de chocolate belga. Indulgente e irresistível.</p>
                         </div>
                     </div>
                 </div>
@@ -163,7 +168,7 @@
             <div class="cta-section">
                 <h2>Ficou com água na boca?</h2>
                 <p>Entre em contato conosco e faça seu pedido!</p>
-                <a href="contact.html" class="btn-primary">Fale Conosco</a>
+                <a href="/contato" class="btn-primary">Fale Conosco</a>
             </div>
         </div>
     </section>
@@ -174,14 +179,14 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Ternarius</h3>
-                    <p>Açaí e Picolés Artesanais</p>
+                    <p>Açaí e Cremes Artesanais</p>
                 </div>
                 <div class="footer-section">
                     <h4>Links Rápidos</h4>
                     <ul>
-                        <li><a href="index.html">Início</a></li>
-                        <li><a href="products.html">Produtos</a></li>
-                        <li><a href="contact.html">Contato</a></li>
+                        <li><a href="/">Início</a></li>
+                        <li><a href="/produtos">Produtos</a></li>
+                        <li><a href="/contato">Contato</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -203,6 +208,6 @@
         </svg>
     </a>
 
-    <script src="script.js"></script>
+    <script src="/scripts/script.js"></script>
 </body>
 </html>

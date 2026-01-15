@@ -7,11 +7,15 @@
 
 :root {
     /* Purple Theme Colors */
-    --primary-purple: #7c3aed;
-    --dark-purple: #5b21b6;
-    --light-purple: #a78bfa;
-    --accent-purple: #c4b5fd;
-    --bg-purple: #f5f3ff;
+    --primary-purple: #9B246B;
+    --dark-purple: #7a1d56;
+    --light-purple: #c44f98;
+    --accent-purple: #d97bb5;
+    --bg-purple: #fdf4f9;
+    
+    /* Button Colors */
+    --button-purple: #610f4d;
+    --button-dark-purple: #4a0b3a;
     
     /* Additional Colors */
     --white: #ffffff;
@@ -54,6 +58,7 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .logo h1 {
@@ -67,6 +72,40 @@ body {
     opacity: 0.9;
 }
 
+/* Mobile Menu Toggle Button */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 0.35rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 101;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: var(--white);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* Navigation */
 .nav ul {
     display: flex;
     list-style: none;
@@ -138,7 +177,7 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--primary-purple) 0%, var(--dark-purple) 100%);
+    background: linear-gradient(135deg, var(--button-purple) 0%, var(--button-dark-purple) 100%);
     color: var(--white);
 }
 
@@ -632,12 +671,50 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .header .container {
-        flex-direction: column;
-        gap: 1rem;
+    /* Show mobile menu toggle */
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    /* Hide nav by default on mobile */
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: linear-gradient(180deg, var(--primary-purple) 0%, var(--dark-purple) 100%);
+        padding: 5rem 2rem 2rem;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+        z-index: 99;
+    }
+
+    .nav.active {
+        right: 0;
     }
 
     .nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .nav ul li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    .nav a {
+        display: block;
+        padding: 1rem;
+        font-size: 1.125rem;
+    }
+
+    .header .container {
+        flex-direction: row;
         gap: 1rem;
     }
 
@@ -694,12 +771,6 @@ body {
 
     .container {
         padding: 0 1rem;
-    }
-
-    .nav ul {
-        flex-direction: column;
-        gap: 0.5rem;
-        align-items: center;
     }
 
     .hero h2 {

@@ -1,5 +1,36 @@
-// Handle Contact Form Submission
+// Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const nav = document.querySelector('.nav');
+    
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenuToggle.classList.remove('active');
+                nav.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = nav.contains(event.target);
+            const isClickOnToggle = mobileMenuToggle.contains(event.target);
+            
+            if (!isClickInsideNav && !isClickOnToggle && nav.classList.contains('active')) {
+                mobileMenuToggle.classList.remove('active');
+                nav.classList.remove('active');
+            }
+        });
+    }
+
+    // Handle Contact Form Submission
     const contactForm = document.getElementById('contactForm');
     
     if (contactForm) {
@@ -32,7 +63,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Mobile menu handling (if needed in the future)
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
